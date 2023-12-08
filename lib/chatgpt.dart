@@ -131,31 +131,43 @@ class MainMenu extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Main Menu'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ChatScreen()),
-                );
-              },
-              child: const Text('Phrase finisher'),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          SizedBox(height: 20), // Add space on top
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              margin: const EdgeInsets.symmetric(horizontal: 20),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ChatScreen()),
+                  );
+                },
+                child: const Text('Random Phrase Finisher'),
+              ),
             ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => NewScreen()),
-                );
-              },
-              child: const Text('GPT 3.5'),
+          ),
+          const SizedBox(height: 20), // Add space between buttons
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              margin: const EdgeInsets.symmetric(horizontal: 20),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NewScreen()),
+                  );
+                },
+                child: const Text('Chat GPT 3.5 (low size answers)'),
+              ),
             ),
-          ],
-        ),
+          ),
+          SizedBox(height: 20), // Add space on bottom
+        ],
       ),
     );
   }
