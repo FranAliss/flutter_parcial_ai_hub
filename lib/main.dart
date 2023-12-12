@@ -17,8 +17,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// final String apiKey = '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';
-// final String apiKey = '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';
 class ChatScreen extends StatefulWidget {
   @override
   _ChatScreenState createState() => _ChatScreenState();
@@ -27,8 +25,7 @@ class ChatScreen extends StatefulWidget {
 class _ChatScreenState extends State<ChatScreen> {
   final TextEditingController _textController = TextEditingController();
   final List<String> _chatMessages = [];
-
-  final String apiKey = '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';
+  final String apiKey = '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';
   void _addMessage(String message) {
     setState(() {
       _chatMessages.add(message);
@@ -134,7 +131,7 @@ class MainMenu extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          SizedBox(height: 20), // Add space on top
+          const SizedBox(height: 20), // Add space on top
           Expanded(
             child: Container(
               width: double.infinity,
@@ -166,7 +163,7 @@ class MainMenu extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20), // Add space on bottom
+          const SizedBox(height: 20), // Add space on bottom
         ],
       ),
     );
@@ -181,7 +178,7 @@ class NewScreen extends StatefulWidget {
 class _NewScreenState extends State<NewScreen> {
   final TextEditingController _textController = TextEditingController();
   final List<String> _newScreenMessages = [];
-  final String apiKey = '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';
+  final String apiKey = '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';
   void _addMessage(String message) {
     setState(() {
       _newScreenMessages.add(message);
